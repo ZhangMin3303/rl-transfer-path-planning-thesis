@@ -1,0 +1,17 @@
+*.asv
+*.mat
+desktop.ini
+.DS_Store
+Thumbs.db
+
+# MATLAB generated folders and local caches
+slprj/
+codegen/
+*.mlx
+
+# Raw thesis/private materials are intentionally not included.
+*.docx
+*.pdf
+*.pptx
+*.zip
+*.rar
