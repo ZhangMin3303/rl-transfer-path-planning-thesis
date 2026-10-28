@@ -2,7 +2,7 @@
 
 This repository is a public, code-focused version of my undergraduate thesis project on reinforcement learning path planning with transfer strategies.
 
-The project studies how a Q-learning agent can reuse knowledge learned in a source maze to accelerate path planning in related target mazes. Experiments are conducted on 4x4, 8x8, and 12x12 grid mazes.
+The project investigates whether source-task knowledge can help learning in related grid mazes. The source covers 4x4, 8x8 and 12x12 simulations. No statistically reliable improvement across random seeds is claimed.
 
 ## Project Highlights
 
@@ -57,7 +57,7 @@ where `lambda_t` decays over training. Early episodes inherit more source-task e
 
 ## How To Run
 
-Open MATLAB R2023a or later, set this repository as the working directory, and run:
+MATLAB R2023a is the recorded environment; later versions have not been checked here. Open MATLAB, set this repository as the working directory, and run:
 
 ```matlab
 addpath("tools");
@@ -68,7 +68,11 @@ Individual scripts can also be run directly from `src/`.
 
 ## Verification
 
-All 15 MATLAB scripts in `src/` were executed successfully on MATLAB R2023a. See [RUN_LOG.md](RUN_LOG.md) for details.
+The existing [RUN_LOG.md](RUN_LOG.md) contains historical execution notes for 15 scripts; it is not a record of a new full rerun.
+
+On 2026-10-28, an unmodified copy of `transfer_term_q_learning_4.m` passed a selected execution check on MATLAB R2023a: 200 episodes, an 80-step cap, a finite 16x4 Q table and a final transfer weight of zero. This checks execution and basic invariants, not comparative performance. See [review scope](docs/REVIEW_2026-10-28.md) and [machine-readable result](docs/validation_2026-10-28.json).
+
+The legacy reward-area plot uses a custom normalization and is not diagnostic ROC AUC. Its suitability for method comparisons, initialization fairness, action/terminal handling and results across seeds remain unvalidated. No gain or convergence advantage is inferred from this selected run.
 
 ## Notes
 

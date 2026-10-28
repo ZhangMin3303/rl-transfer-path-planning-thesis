@@ -1,9 +1,11 @@
-# Run Log
+# Run Log — Historical Record
+
+The table below is retained as a historical record. Its listed elapsed times are not new measurements or controlled performance benchmarks. The selected 2026-10-28 check is documented separately in [REVIEW_2026-10-28.md](docs/REVIEW_2026-10-28.md); it did not rerun all 15 scripts.
 
 Environment:
 
-- MATLAB: R2023a available at `D:\MATLAB\bin\matlab.exe`
-- Verification target: local public整理版 `rl-transfer-path-planning-thesis`
+- MATLAB: R2023a; use the installation available in your environment
+- Verification target: public portfolio version `rl-transfer-path-planning-thesis`
 - Run mode: `DefaultFigureVisible = off`
 - Command:
 
@@ -44,7 +46,7 @@ All 15 scripts executed successfully.
 | `transfer_term_q_learning_4.m` | PASS | 2.59s |
 | `transfer_term_q_learning_8.m` | PASS | 3.72s |
 
-Smoke-test output from the 4x4 baseline included the learned optimal path:
+Smoke-test output from the 4x4 baseline included the one recorded learned path:
 
 ```text
 1 -> 5 -> 9 -> 10 -> 11 -> 15 -> 16
